@@ -1,0 +1,51 @@
+<div fxLaoutWrap>
+
+  <mat-toolbar color="primary">
+
+    <img src="../favicon.ico">
+
+    <span class="example-spacer"></span>
+
+    <button mat-icon-button [matMenuTriggerFor]="menu" #menuTrigger="matMenuTrigger" (mouseenter)="menuTrigger.openMenu()">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+
+    <mat-menu #menu="matMenu">
+
+      <button mat-menu-item routerLink="">
+        <mat-icon class="example-icon">fingerprint</mat-icon>
+        <span>ログイン</span>
+      </button>
+
+      <span class="example-spacer"></span>
+
+      <button mat-menu-item routerLink="">
+        <mat-icon class="example-icon">account_box</mat-icon>
+        <span>新規登録</span>
+      </button>
+
+      <span class="example-spacer"></span>
+
+      <button mat-menu-item routerLink="">
+        <mat-icon class="example-icon">add_to_photos</mat-icon>
+        <span>商品登録</span>
+      </button>
+
+      <button mat-menu-item routerLink="">
+        <mat-icon class="example-icon">search</mat-icon>
+        <span>登録商品検索</span>
+      </button>
+
+      <button mat-menu-item routerLink="">
+        <mat-icon class="example-icon">face</mat-icon>
+        <span>ユーザ編集</span>
+      </button>
+
+      <button mat-menu-item routerLink="">
+        <mat-icon class="example-icon">delete</mat-icon>
+        <span>退会</span>
+      </button>
+
+    </mat-menu>
+  </mat-toolbar>
+</div>
