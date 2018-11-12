@@ -37,6 +37,12 @@
       </mat-list>
 
     </div>
+
+
+
+
+
+
     <!-- 
     <div id="contents">
       <p>紹介文を書く</p>
@@ -50,7 +56,7 @@
       allowfullscreen></iframe>
     </div>
      -->
-<!-- 
+    <!-- 
      <mat-card class="example-card">
       <mat-card-header>
         <div mat-card-avatar class="example-header-image"></div>
@@ -90,11 +96,43 @@
 
     <mat-checkbox>Check me!</mat-checkbox>
 
+    <br>
+
     <mat-form-field>
       <input matInput [matDatepicker]="picker" placeholder="Choose a date">
       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
       <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
+
+
+
+    <div>
+      <!--入力欄-->
+      <p>元本<br>
+        <input type="tel" [(ngModel)]="initValue">円
+      </p>
+      <!--金利欄-->
+      <p>金利<br>
+        <input type="tel" [(ngModel)]="rate">％
+      </p>
+      <div *ngIf="initValue && rate">
+        <p>１０年後<br>{{calc() | number}}円</p>
+      </div>
+    </div>
+    <br>
+    <!-- クリアボタン-->
+    <button (click)="clear()">クリア</button>
+    <br>
+    <!-- 保存ボタン -->
+    <button (click)="save()">保存</button>
+    <br>
+
+    <table>
+      <tr *ngFor="let value of calcArray(); let i = index">
+        <td>{{i}}年目</td>
+        <td>{{value | number}}円</td>
+      </tr>
+    </table>
 
 
     <div id="footer">

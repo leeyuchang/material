@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MyNavComponent } from './my-nav/my-nav.component';
@@ -24,6 +24,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     HeaderComponent
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     BrowserAnimationsModule,
     LayoutModule,
